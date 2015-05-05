@@ -14,6 +14,10 @@
 		BA5A3C4A1AF88CF600E50F89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA5A3C491AF88CF600E50F89 /* Images.xcassets */; };
 		BA5A3C4D1AF88CF600E50F89 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA5A3C4B1AF88CF600E50F89 /* LaunchScreen.xib */; };
 		BA5A3C591AF88CF600E50F89 /* GitHubTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5A3C581AF88CF600E50F89 /* GitHubTestTests.m */; };
+		BA5A3C781AF8C94200E50F89 /* PlayerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5A3C751AF8C94200E50F89 /* PlayerCell.m */; };
+		BA5A3C791AF8C94200E50F89 /* PlayerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5A3C751AF8C94200E50F89 /* PlayerCell.m */; };
+		BA5A3C7A1AF8C94200E50F89 /* PlayersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5A3C771AF8C94200E50F89 /* PlayersTableViewController.m */; };
+		BA5A3C7B1AF8C94200E50F89 /* PlayersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5A3C771AF8C94200E50F89 /* PlayersTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,10 @@
 		BA5A3C521AF88CF600E50F89 /* GitHubTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA5A3C571AF88CF600E50F89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA5A3C581AF88CF600E50F89 /* GitHubTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GitHubTestTests.m; sourceTree = "<group>"; };
+		BA5A3C741AF8C94200E50F89 /* PlayerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerCell.h; sourceTree = "<group>"; };
+		BA5A3C751AF8C94200E50F89 /* PlayerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerCell.m; sourceTree = "<group>"; };
+		BA5A3C761AF8C94200E50F89 /* PlayersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayersTableViewController.h; sourceTree = "<group>"; };
+		BA5A3C771AF8C94200E50F89 /* PlayersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayersTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,7 @@
 		BA5A3C3B1AF88CF600E50F89 /* GitHubTest */ = {
 			isa = PBXGroup;
 			children = (
+				BA5A3C731AF8C94200E50F89 /* FirstTab */,
 				BA5A3C401AF88CF600E50F89 /* AppDelegate.h */,
 				BA5A3C411AF88CF600E50F89 /* AppDelegate.m */,
 				BA5A3C431AF88CF600E50F89 /* ViewController.h */,
@@ -117,6 +126,17 @@
 				BA5A3C571AF88CF600E50F89 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BA5A3C731AF8C94200E50F89 /* FirstTab */ = {
+			isa = PBXGroup;
+			children = (
+				BA5A3C741AF8C94200E50F89 /* PlayerCell.h */,
+				BA5A3C751AF8C94200E50F89 /* PlayerCell.m */,
+				BA5A3C761AF8C94200E50F89 /* PlayersTableViewController.h */,
+				BA5A3C771AF8C94200E50F89 /* PlayersTableViewController.m */,
+			);
+			path = FirstTab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,8 +239,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA5A3C781AF8C94200E50F89 /* PlayerCell.m in Sources */,
 				BA5A3C451AF88CF600E50F89 /* ViewController.m in Sources */,
 				BA5A3C421AF88CF600E50F89 /* AppDelegate.m in Sources */,
+				BA5A3C7A1AF8C94200E50F89 /* PlayersTableViewController.m in Sources */,
 				BA5A3C3F1AF88CF600E50F89 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,6 +251,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA5A3C7B1AF8C94200E50F89 /* PlayersTableViewController.m in Sources */,
+				BA5A3C791AF8C94200E50F89 /* PlayerCell.m in Sources */,
 				BA5A3C591AF88CF600E50F89 /* GitHubTestTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +440,7 @@
 				BA5A3C5E1AF88CF600E50F89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA5A3C5F1AF88CF600E50F89 /* Build configuration list for PBXNativeTarget "GitHubTestTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +449,7 @@
 				BA5A3C611AF88CF600E50F89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

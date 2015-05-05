@@ -7,6 +7,7 @@
 //
 
 #import "PlayersTableViewController.h"
+#import "PlayerCell.h"
 
 @interface PlayersTableViewController ()
 
@@ -17,12 +18,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    cellTitles = [[NSArray alloc] initWithObjects:@"me2",@"you2",@"he2",@"she2",@"me2",@"you2",@"he2",@"she2",@"me3",@"you3",@"he3",@"she3",@"me4",@"you4",@"he4",@"she4", nil];
+    cellTitles = [[NSArray alloc] initWithObjects:@"me",@"you",@"he",@"she",@"me2",@"you2",@"he2",@"she2",@"me3",@"you3",@"he3",@"she3",@"me4",@"you4",@"he4",@"she4", nil];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (UIImage *)imageForRating:(int)rating{
+    switch (rating) {
+        case 1:
+            return [UIImage imageNamed:@"photo"];
+        default:
+            return [UIImage imageNamed:@"photo"];
+    }
 }
 
 #pragma mark - Table view data source
@@ -35,15 +50,20 @@
     return [self.cellTitles count];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 55.0;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIdentifier = @"PlayerCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-    }
-    NSString *title = [NSString stringWithString:[cellTitles objectAtIndex:[indexPath row]]];
-    cell.textLabel.text = title;
+    PlayerCell *cell = (PlayerCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+//    if (cell == nil) {
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+//    }
+    
+    NSString *name = [NSString stringWithString:[cellTitles objectAtIndex:[indexPath row]]];
+    [cell.nameLbl setText:name];
+    [cell.photo setImage:[self imageForRating:0]];
     
     return cell;
 }
